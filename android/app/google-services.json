@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "428580172185",
+    "project_id": "safty-helmet-8811",
+    "storage_bucket": "safty-helmet-8811.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428580172185:android:c50f915f542fd43bb02308",
+        "android_client_info": {
+          "package_name": "com.example.safty_helmet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXF1Lf4r9S3d_yDzTZlQx2_X0GkWFTPyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
