@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:safety_helmet/providers/wokerProvider.dart';
-import 'package:safety_helmet/screens/AdminHomeScreen.dart';
 import 'package:safety_helmet/screens/loginScreen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -30,9 +29,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
 
-    return WillPopScope(
-      onWillPop: () async {
-        return false;
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (didPop){
+        if(didPop){
+          return;
+        }
       },
       child: Scaffold(
         body: SafeArea(
