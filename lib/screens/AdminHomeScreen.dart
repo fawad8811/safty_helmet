@@ -11,8 +11,7 @@ class AdminHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screensize = MediaQuery.of(context).size;
-    // final screenHeight = screensize.height - AppBar().preferredSize.height;
+    final screenSize = MediaQuery.of(context).size;
     final UIController c = Get.put(UIController());
     return WillPopScope(
       onWillPop: () async {
@@ -22,7 +21,7 @@ class AdminHomeScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "Safety Helmet",
-            style: GoogleFonts.fjallaOne(color: Colors.white),
+            style: GoogleFonts.fjallaOne(color: Colors.black),
           ),
           actions: [
             IconButton(
@@ -38,8 +37,8 @@ class AdminHomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.all(20.0),
-            width: screensize.width,
-            height: screensize.height,
+            width: screenSize.width,
+            height: screenSize.height,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,

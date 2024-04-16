@@ -8,7 +8,8 @@ class WorkerProvider extends ChangeNotifier {
   final auth = FirebaseAuth.instance;
   FirebaseDatabase database = FirebaseDatabase.instance;
   User? _currentUserFirebase = FirebaseAuth.instance.currentUser;
-  late WorkersModel _currentUser;
+  // late WorkersModel _currentUser;
+  WorkersModel _currentUser = WorkersModel(workerId: "", workerName: "", workerStatus: false, workerHelmetStatus: false, workerEmergencyAlarm: false);
 
   WorkersModel get getCurrentUser {
     return _currentUser;

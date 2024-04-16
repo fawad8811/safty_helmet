@@ -11,6 +11,7 @@ import 'package:url_launcher/url_launcher_string.dart';
 class HomeScreen extends StatefulWidget {
   String longitude;
   String latitude;
+
   HomeScreen(
     this.longitude,
     this.latitude, {
@@ -81,15 +82,17 @@ class _HomeScreenState extends State<HomeScreen> {
     final screenHeight = screenSize.height - AppBar().preferredSize.height;
     final worker = Provider.of<WorkerProvider>(context).getCurrentUser;
 
-    return WillPopScope(
-      onWillPop: () async {
-        return false;
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (didPop){
+        return;
       },
       child: Scaffold(
         appBar: AppBar(
+          leading: const SizedBox.shrink(),
           title: Text(
             "Safety Helmet",
-            style: GoogleFonts.fjallaOne(color: Colors.white),
+            style: GoogleFonts.fjallaOne(color: Colors.black),
           ),
         ),
         body: SafeArea(
@@ -312,7 +315,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       label: Text(
                         'On Map',
                         style: GoogleFonts.fjallaOne(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 16.0),
                       ),
@@ -334,7 +337,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ? Text(
                               'Log Out',
                               style: GoogleFonts.fjallaOne(
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16.0),
                             )

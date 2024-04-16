@@ -170,21 +170,26 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontSize: 14),
                               ),
                               validator: (String? value) {
-                                if (value!.isEmpty)
+                                if (value!.isEmpty) {
                                   return 'Email cannot be empty';
-                                if (!value.contains('@'))
+                                }
+                                if (!value.contains('@')) {
                                   return 'Kindly add (@) at proper place';
+                                }
                                 if (value.contains('gmail') &&
                                     !value.contains('itailor')) return null;
                                 if (!value.contains('gmail') &&
                                     value.contains('itailor')) return null;
                                 if (!value.contains('gmail') ||
-                                    !value.contains('itailor'))
+                                    !value.contains('itailor')) {
                                   return 'Invalid User Email Address.';
-                                if (!value.endsWith('.com'))
+                                }
+                                if (!value.endsWith('.com')) {
                                   return 'Invalid email address';
-                                if (value.startsWith(RegExp(r'[0-9]')))
+                                }
+                                if (value.startsWith(RegExp(r'[0-9]'))) {
                                   return 'Email cannot start with a number';
+                                }
 
                                 return null;
                               },
@@ -248,15 +253,18 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                               validator: (String? value) {
-                                if (value!.isEmpty)
+                                if (value!.isEmpty) {
                                   return 'Password cannot be empty';
-                                if (value.length < 6)
+                                }
+                                if (value.length < 6) {
                                   return 'Password should consist at least 6 characters';
+                                }
                                 if (value.contains('~') ||
                                     value.contains('*') ||
                                     value.contains('&') ||
-                                    value.contains('#'))
+                                    value.contains('#')) {
                                   return 'Invalid Password';
+                                }
 
                                 return null;
                               },
