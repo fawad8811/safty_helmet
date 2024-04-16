@@ -3,6 +3,6 @@ class Assets {
   Assets._();
 
   static const String imagesSafetyHelmet = 'assets/images/safety_helmet.svg';
-  static const String imagesSafetyHelmetGrey = 'assets/images/safety_helmet_grey.svg';
-
+  static const String imagesSafetyHelmetGrey =
+      'assets/images/safety_helmet_grey.svg';
 }
